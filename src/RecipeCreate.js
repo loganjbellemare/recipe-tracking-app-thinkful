@@ -14,7 +14,7 @@ function RecipeCreate({ createRecipe }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     createRecipe(formData);
-    setFormData({ ... initialFormData });
+    setFormData({ ...initialFormData });
   };
  
   // TODO: Add the required submit and change handlers
@@ -40,6 +40,7 @@ function RecipeCreate({ createRecipe }) {
                 onChange={handleChange}
                 value={formData.name}
                 placeholder="Name"
+                required='true'
               />
             </td>
             <td>
@@ -50,6 +51,7 @@ function RecipeCreate({ createRecipe }) {
                 onChange={handleChange}
                 value={formData.cuisine}
                 placeholder="Cuisine"
+                required='true'
               />
             </td>
             <td>
@@ -60,6 +62,7 @@ function RecipeCreate({ createRecipe }) {
                 onChange={handleChange}
                 value={formData.photo}
                 placeholder="URL"
+                required='true'
               />
             </td>
             <td>
@@ -69,6 +72,7 @@ function RecipeCreate({ createRecipe }) {
                 onChange={handleChange}
                 value={formData.ingredients}
                 placeholder="Ingredients"
+                required='true'
               />
             </td>
             <td>
@@ -78,6 +82,7 @@ function RecipeCreate({ createRecipe }) {
                 onChange={handleChange}
                 value={formData.preparation}
                 placeholder="Preparation"
+                required='true'
               />
             </td>
             <td>
