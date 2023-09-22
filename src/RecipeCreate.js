@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 function RecipeCreate({ createRecipe }) {
   const initialFormData = {
-    name: '',
-    cuisine: '',
-    photo: '',
-    ingredients: '',
-    preparation: '',
-  }
+    name: "",
+    cuisine: "",
+    photo: "",
+    ingredients: "",
+    preparation: "",
+  };
   const [formData, setFormData] = useState({ ...initialFormData });
 
   // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
@@ -16,7 +16,7 @@ function RecipeCreate({ createRecipe }) {
     createRecipe(formData);
     setFormData({ ...initialFormData });
   };
- 
+
   // TODO: Add the required submit and change handlers
   const handleChange = ({ target }) => {
     setFormData({
@@ -25,10 +25,10 @@ function RecipeCreate({ createRecipe }) {
     });
   };
 
-  console.log('current state of formData:', formData);
-  // TODO: Add the required input and textarea form elements. 
+  console.log("current state of formData:", formData);
+  // TODO: Add the required input and textarea form elements.
   return (
-    <form name="create" onSubmit={handleSubmit}> 
+    <form name="create" onSubmit={handleSubmit}>
       <table>
         <tbody>
           <tr>
@@ -40,49 +40,49 @@ function RecipeCreate({ createRecipe }) {
                 onChange={handleChange}
                 value={formData.name}
                 placeholder="Name"
-                required='true'
+                required={true}
               />
             </td>
             <td>
-              <input 
+              <input
                 name="cuisine"
                 id="cuisine"
                 type="text"
                 onChange={handleChange}
                 value={formData.cuisine}
                 placeholder="Cuisine"
-                required='true'
+                required={true}
               />
             </td>
             <td>
-              <input 
+              <input
                 name="photo"
                 id="photo"
                 type="url"
                 onChange={handleChange}
                 value={formData.photo}
                 placeholder="URL"
-                required='true'
+                required={true}
               />
             </td>
             <td>
-              <textarea 
+              <textarea
                 name="ingredients"
                 id="ingredients"
                 onChange={handleChange}
                 value={formData.ingredients}
                 placeholder="Ingredients"
-                required='true'
+                required={true}
               />
             </td>
             <td>
-            <textarea 
+              <textarea
                 name="preparation"
                 id="preparation"
                 onChange={handleChange}
                 value={formData.preparation}
                 placeholder="Preparation"
-                required='true'
+                required={true}
               />
             </td>
             <td>
